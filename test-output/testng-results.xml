@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-22T18:37:07 IST" name="Suite" finished-at="2024-05-22T18:37:21 IST" duration-ms="13493">
+    <groups>
+    </groups>
+    <test started-at="2024-05-22T18:37:07 IST" name="Test" finished-at="2024-05-22T18:37:21 IST" duration-ms="13493">
+      <class name="testCases.AddToCart">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.AddToCart@7a419da4]" started-at="2024-05-22T18:37:04 IST" name="launchBrowser" finished-at="2024-05-22T18:37:07 IST" duration-ms="3948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="reportGeneration()[pri:0, instance:testCases.AddToCart@7a419da4]" started-at="2024-05-22T18:37:07 IST" name="reportGeneration" finished-at="2024-05-22T18:37:08 IST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportGeneration -->
+        <test-method signature="itemsAddTocart()[pri:0, instance:testCases.AddToCart@7a419da4]" started-at="2024-05-22T18:37:08 IST" name="itemsAddTocart" finished-at="2024-05-22T18:37:21 IST" duration-ms="13265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- itemsAddTocart -->
+        <test-method is-config="true" signature="testFail(org.testng.ITestResult)[pri:0, instance:testCases.AddToCart@7a419da4]" started-at="2024-05-22T18:37:21 IST" name="testFail" finished-at="2024-05-22T18:37:21 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=itemsAddTocart status=SUCCESS method=AddToCart.itemsAddTocart()[pri:0, instance:testCases.AddToCart@7a419da4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.AddToCart@7a419da4]" started-at="2024-05-22T18:37:21 IST" name="tearDown" finished-at="2024-05-22T18:37:22 IST" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.AddToCart -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
