@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import commomFunctions.BaseClass;
+import commomFunctions.UtilityMethods;
 import pageObjects.AddTocartObjects;
 
 public class AddToCart extends BaseClass {
@@ -53,16 +54,18 @@ public class AddToCart extends BaseClass {
 		AddTocartObjects.proceedTocheckout.click();
 		extentTest.info("On the checkout Page");
 		Thread.sleep(1500);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(AddTocartObjects.placeOrder));
+		UtilityMethods.explicitWait(AddTocartObjects.placeOrder, driver);
+		/*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(AddTocartObjects.placeOrder));*/
 		extentTest.pass("on the checkout page", MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenShotb64()).build());
 		List<WebElement> totalItemCount = driver.findElements(By.xpath("//*[@class='quantity']"));
 		if (totalItemCount.size() == itemName.length) {
 			AddTocartObjects.placeOrder.click();
-			wait.until(ExpectedConditions.elementToBeClickable(AddTocartObjects.selectCountryPage));
+			UtilityMethods.explicitWait(AddTocartObjects.selectCountryPage, driver);
 			extentTest.info("On the Place order Page");
-			Select select = new Select(AddTocartObjects.selectCountry);
-			select.selectByVisibleText("India");
+			UtilityMethods.selectElement(AddTocartObjects.selectCountry, "India");
+			/*Select select = new Select(AddTocartObjects.selectCountry);
+			select.selectByVisibleText("India");*/
 			Thread.sleep(1000);
 			AddTocartObjects.checkButton.click();
 			extentTest.pass("on the place order page", MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenShotb64()).build());
